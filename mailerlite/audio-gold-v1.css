@@ -1,0 +1,22 @@
+.dg-audio{--dg-gold:linear-gradient(135deg,#b88734 0%,#e0b866 48%,#c8963e 100%);margin:24px 0 0;padding:18px 20px;border:1px solid rgba(200,150,62,.65);border-radius:12px;background:rgba(36,63,63,.8);max-width:480px;text-align:left;position:relative}
+.hero .dg-audio__title{margin:0 0 12px;font:600 12px/1.5 system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#d4a84f}
+.hero .dg-audio audio{width:100%;height:44px;filter:none!important;opacity:1!important}
+.dg-audio.dg-audio--ready audio{display:none}
+.dg-audio [hidden]{display:none!important}
+.dg-audio__controls{display:grid;grid-template-columns:44px auto minmax(40px,1fr) 44px 44px;align-items:center;gap:8px}
+.dg-audio button{display:inline-flex;align-items:center;justify-content:center;background:none;border:0;box-shadow:none;width:44px;min-height:44px;padding:0;color:#d4a84f;cursor:pointer;border-radius:6px;font:16px system-ui}
+.dg-audio button:hover{background:rgba(200,150,62,.1)}
+.dg-audio button:focus-visible,.dg-audio input:focus-visible,.dg-audio a:focus-visible{outline:2px solid #e0b866;outline-offset:3px}
+.dg-audio__play span{font:28px/1 system-ui;background:var(--dg-gold);-webkit-background-clip:text;background-clip:text;color:transparent}
+.dg-audio__time{color:#d4a84f;white-space:nowrap;font:13px/1.4 system-ui;font-variant-numeric:tabular-nums}
+.dg-audio__seek{-webkit-appearance:none;appearance:none;min-width:0;width:100%;height:6px;border:0;border-radius:8px;margin:0;cursor:pointer;background:linear-gradient(90deg,#b88734,#e0b866,#c8963e) 0/var(--dg-progress,0%) 100% no-repeat,#607c73;accent-color:#d4a84f}
+.dg-audio__seek::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:16px;height:16px;border:0;border-radius:50%;background:var(--dg-gold)}
+.dg-audio__seek::-moz-range-thumb{width:16px;height:16px;border:0;border-radius:50%;background:var(--dg-gold)}
+.dg-audio__seek:disabled{opacity:.55;cursor:wait}
+.dg-audio__mute svg{width:24px;height:24px;fill:url(#dg-audio-gold)}
+.dg-audio__more span{font-size:28px;background:var(--dg-gold);-webkit-background-clip:text;background-clip:text;color:transparent}
+.dg-audio__options{position:absolute;right:12px;bottom:68px;z-index:5;background:#243f3f;border:1px solid #c8963e;border-radius:8px;padding:6px;box-shadow:0 8px 24px #0004}
+.dg-audio__options button,.dg-audio__options a{width:100%;padding:10px 12px;display:block;text-align:left;font:14px/1.4 system-ui;color:#f5f0e8}
+.dg-audio__options a:hover{background:rgba(200,150,62,.1)}
+.hero .dg-audio__status{margin:8px 0 0;font:12px/1.5 system-ui;color:#f5f0e8}
+@media(max-width:420px){.dg-audio{padding:16px}.dg-audio__controls{grid-template-columns:44px 1fr 44px 44px;gap:6px}.dg-audio__seek{grid-column:1/-1;grid-row:2;margin:10px 0 6px}.dg-audio__options{bottom:94px}}
