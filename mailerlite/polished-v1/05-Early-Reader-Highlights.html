@@ -1,0 +1,43 @@
+<div>
+<style>
+.dg-hero-reviews{background:var(--sand);padding:40px 0;text-align:center;color:var(--text-dark)}
+.dg-hero-reviews__inner{max-width:720px;margin:auto;padding:0 24px}
+.dg-hero-reviews__label{font:500 .75rem/1.5 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+.dg-hero-reviews__slides{display:grid;align-items:center;min-height:128px}
+.dg-hero-reviews__slide{grid-area:1/1;visibility:hidden}
+.dg-hero-reviews__slide.dg-active{visibility:visible;animation:dgHeroEnter .25s ease-out}
+.dg-hero-reviews__mark{display:block;font:40px/1 Georgia,serif;color:var(--gold);opacity:.6;margin-bottom:8px}
+.dg-hero-reviews__quote{font:italic clamp(1.25rem,3vw,1.75rem)/1.5 Georgia,serif;margin-bottom:12px}
+.dg-hero-reviews__credit{font:400 .8125rem/1.5 var(--sans);color:#666}
+.dg-hero-reviews__dots{display:flex;align-items:center;justify-content:center;margin-top:12px}
+.dg-hero-reviews__dots button{background:none;border:0;width:28px;height:32px;padding:0;cursor:pointer;display:grid;place-items:center}
+.dg-hero-reviews__dots button:after{content:"";width:6px;height:6px;border-radius:50%;background:#d8cbbb}
+.dg-hero-reviews__dots button[aria-pressed="true"]:after{width:10px;height:10px;background:var(--gold)}
+.dg-hero-reviews__dots button:focus-visible{outline:2px solid var(--gold);outline-offset:1px;border-radius:4px}
+@keyframes dgHeroEnter{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:767px){.dg-hero-reviews{padding:32px 0}}
+@media(prefers-reduced-motion:reduce){.dg-hero-reviews__slide.dg-active{animation:none}}
+</style>
+<section class="dg-hero-reviews" aria-label="Early reader highlights" aria-roledescription="carousel">
+<div class="dg-hero-reviews__inner">
+<p class="dg-hero-reviews__label">What Early Readers Are Saying</p>
+<div class="dg-hero-reviews__slides">
+<div class="dg-hero-reviews__slide dg-active"><span class="dg-hero-reviews__mark" aria-hidden="true">&ldquo;</span><p class="dg-hero-reviews__quote">I couldn't put it down.</p><p class="dg-hero-reviews__credit">— Early reader</p></div>
+<div class="dg-hero-reviews__slide" aria-hidden="true"><span class="dg-hero-reviews__mark" aria-hidden="true">&ldquo;</span><p class="dg-hero-reviews__quote">It catches you right to the core of your heart.</p><p class="dg-hero-reviews__credit">— Early reader</p></div>
+<div class="dg-hero-reviews__slide" aria-hidden="true"><span class="dg-hero-reviews__mark" aria-hidden="true">&ldquo;</span><p class="dg-hero-reviews__quote">A page turner!</p><p class="dg-hero-reviews__credit">— Early reader</p></div>
+<div class="dg-hero-reviews__slide" aria-hidden="true"><span class="dg-hero-reviews__mark" aria-hidden="true">&ldquo;</span><p class="dg-hero-reviews__quote">You have no idea how much I can relate.</p><p class="dg-hero-reviews__credit">— Early reader</p></div>
+<div class="dg-hero-reviews__slide" aria-hidden="true"><span class="dg-hero-reviews__mark" aria-hidden="true">&ldquo;</span><p class="dg-hero-reviews__quote">Just what I need right now.</p><p class="dg-hero-reviews__credit">— Early reader</p></div>
+</div><div class="dg-hero-reviews__dots" aria-label="Choose a reader highlight"></div>
+</div></section>
+<script>
+(()=>{
+const r=document.querySelector('.dg-hero-reviews');if(!r||r.dataset.ready)return;r.dataset.ready='1';
+const cards=[...r.querySelectorAll('.dg-hero-reviews__slide')],dots=r.querySelector('.dg-hero-reviews__dots'),reduced=matchMedia('(prefers-reduced-motion:reduce)');
+let i=0,t,hover=false;const stop=()=>clearInterval(t);
+function show(n){i=(n+cards.length)%cards.length;cards.forEach((c,k)=>{c.classList.toggle('dg-active',k===i);c.setAttribute('aria-hidden',String(k!==i))});[...dots.children].forEach((b,k)=>b.setAttribute('aria-pressed',String(k===i)))}
+function run(){stop();if(!reduced.matches&&!document.hidden&&!hover&&!r.contains(document.activeElement))t=setInterval(()=>show(i+1),3000)}
+cards.forEach((c,k)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Show reader highlight '+(k+1));b.addEventListener('click',()=>{show(k);run()});dots.appendChild(b)});
+r.addEventListener('mouseenter',()=>{hover=true;stop()});r.addEventListener('mouseleave',()=>{hover=false;run()});r.addEventListener('focusin',stop);r.addEventListener('focusout',()=>setTimeout(run,0));document.addEventListener('visibilitychange',run);reduced.addEventListener('change',run);show(0);run();
+})();
+</script>
+</div>
