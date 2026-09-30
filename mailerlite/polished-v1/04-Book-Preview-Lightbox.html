@@ -1,0 +1,29 @@
+<div>
+<style>
+#dg-preview-dialog{padding:0;border:1px solid #c8963e;border-radius:10px;background:#1a3a3a;color:#f5f0e8;width:96vw;max-width:1240px;height:92vh;height:92dvh;max-height:96vh;max-height:96dvh;margin:auto;overflow:hidden;z-index:10000}
+#dg-preview-dialog::backdrop{background:rgba(5,18,18,.88)}
+#dg-preview-dialog .dg-preview-shell{display:flex;flex-direction:column;height:100%}
+#dg-preview-dialog .dg-preview-bar{display:flex;align-items:center;justify-content:flex-end;gap:12px;padding:8px 16px;border-bottom:1px solid #476060;font:14px var(--sans)}
+#dg-preview-dialog .dg-preview-bar button{background:transparent;border:1px solid #c8963e;border-radius:5px;color:#f5f0e8;cursor:pointer;width:44px;height:44px;font:24px var(--sans)}
+#dg-preview-dialog iframe{display:block;border:0;width:100%;flex:1;min-height:0;background:#1a3a3a}
+#dg-preview-dialog .dg-preview-fallback{padding:5px 12px 8px;text-align:center;font:12px/1.5 var(--sans)}
+#dg-preview-dialog a{color:#d4a84f}
+#dg-preview-dialog button:focus-visible{outline:2px solid #ffd98e;outline-offset:2px}
+@media(max-width:600px){#dg-preview-dialog{width:100vw;height:100vh;height:100dvh;max-width:100vw;max-height:100vh;max-height:100dvh;border:0;border-radius:0}#dg-preview-dialog .dg-preview-bar{padding:6px 12px}}
+</style>
+<dialog id="dg-preview-dialog" aria-labelledby="dg-preview-title">
+<div class="dg-preview-shell"><div class="dg-preview-bar"><span id="dg-preview-title" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;">Look inside the book</span><button type="button" aria-label="Close book preview">×</button></div>
+<iframe title="Disappointing Grace book preview" allow="fullscreen" allowfullscreen></iframe>
+<div class="dg-preview-fallback"><a href="https://dg-team26.github.io/disappointing-grace-preview/" target="_blank" rel="noopener">Open preview in a new tab</a></div></div>
+</dialog>
+<script>
+(()=>{
+const d=document.getElementById('dg-preview-dialog');if(!d||!d.showModal||d.dataset.ready)return;d.dataset.ready='1';
+const frame=d.querySelector('iframe'),close=d.querySelector('button'),url='https://dg-team26.github.io/disappointing-grace-preview/';let opener,overflow;
+document.addEventListener('click',e=>{const a=e.target.closest('[data-dg-preview]');if(!a||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey||e.button!==0)return;e.preventDefault();if(d.open)return;opener=a;overflow=document.body.style.overflow;document.body.style.overflow='hidden';if(!frame.src)frame.src=url;d.showModal();close.focus()});
+close.addEventListener('click',()=>d.close());d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close()}});
+d.addEventListener('close',()=>{document.body.style.overflow=overflow||'';if(opener?.isConnected)opener.focus()});
+window.addEventListener('message',e=>{if(e.origin===new URL(url).origin&&e.source===frame.contentWindow&&e.data?.type==='dg-preview-close'&&d.open)d.close()});
+})();
+</script>
+</div>
