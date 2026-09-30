@@ -1,0 +1,37 @@
+<div>
+<style>
+.about-book{display:grid;grid-template-columns:minmax(0,1fr);gap:32px;align-items:start}
+.pullquote{border-left:3px solid var(--gold);padding:16px 0 16px 24px;margin:0 0 24px;font-size:1.125rem;font-style:italic;line-height:1.6;color:var(--text-dark);max-width:680px}
+.pullquote:last-child{margin-bottom:0}.pullquote cite,.dg-quote-credit{display:block;margin-top:12px;font:400 .875rem/1.5 var(--sans);color:var(--gold)}
+.author-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:32px;align-items:center}
+.author-photo{width:220px;height:220px;border-radius:50%;object-fit:cover;border:4px solid #ffffff40;margin:auto;box-shadow:0 8px 32px #0005}
+.mission-photo{width:100%;max-width:680px;border-radius:8px;margin:32px auto 0;box-shadow:0 8px 32px #0003;border:2px solid #c8963e33}
+.formats-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;margin-top:32px}
+.format-card{background:#fff;border:1px solid var(--border-light);border-radius:8px;padding:28px 24px;text-align:center;min-width:0;transition:transform .3s,box-shadow .3s}
+.format-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px #0000001a}
+.format-card__icon{display:flex;justify-content:center;margin-bottom:16px}.format-card__icon img{width:40px;height:40px}
+.format-card h3{font:600 1rem/1.5 var(--sans);margin-bottom:8px;color:var(--text-dark)}
+.section .format-card p{font-size:.9375rem;line-height:1.65;color:#666;max-width:100%;margin:0 auto}
+.mission-text{text-align:center;max-width:640px;margin:auto}.mission-text p{margin-left:auto;margin-right:auto}
+.dg-centered{text-align:center}.dg-centered p{margin-left:auto;margin-right:auto}
+.section .dg-accent-quote{font-size:1.125rem;font-style:italic;color:var(--gold);margin-top:24px}
+.dg-pif-cover{margin:28px auto;max-width:420px}.dg-pif-cover img{width:100%;border-radius:4px}
+.section .dg-formats-note{margin:28px auto 0;font-size:.9375rem;color:#666;max-width:560px}
+.dg-contact-action{margin-top:24px}.dg-contact-email{margin-top:12px;font:400 .875rem/1.5 var(--sans);color:#666}
+.lightbox-overlay{display:none;position:fixed;inset:0;background:#0009;z-index:1000;align-items:center;justify-content:center;padding:24px}
+.lightbox-overlay.active{display:flex}.lightbox{background:var(--warm-white);max-width:600px;width:100%;max-height:90vh;overflow-y:auto;border-radius:8px;padding:36px;position:relative;box-shadow:0 20px 60px #0005}
+.lightbox-close{position:absolute;top:10px;right:10px;background:none;border:none;font:24px/1 var(--sans);color:#666;cursor:pointer;width:44px;height:44px}
+.lightbox h2{font:italic 400 1.5rem/1.3 Georgia,serif;margin:0 40px 12px 0;color:var(--text-dark)}
+.lightbox .lb-subtitle{font-size:.9375rem;color:#666;font-style:italic;margin-bottom:24px}
+.lightbox h3{font:600 1.0625rem/1.5 var(--sans);color:var(--text-dark);margin:24px 0 8px}
+.lightbox p{font-size:1rem;margin-bottom:12px;line-height:1.65}.lightbox .lb-divider{border:0;border-top:1px solid var(--border-light);margin:24px 0}
+.lightbox .lb-cta{display:inline-block;background:var(--gold);color:var(--deep-green);padding:12px 28px;border-radius:6px;font:600 1rem/1.5 var(--sans)}
+.lightbox .lb-cta:hover{background:var(--gold-light)}.lightbox .lb-secondary{display:block;margin-top:12px;font:400 .8125rem/1.5 var(--sans);color:#666}
+.site-footer{background:var(--deep-green);color:#ffffffb3;padding:32px 0;font:400 .8125rem/1.6 var(--sans)}
+.footer-inner{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}.footer-logo{height:48px;width:auto;opacity:.85}
+.footer-links{display:flex;gap:12px 24px;list-style:none;flex-wrap:wrap;justify-content:center}.footer-links a{color:#ffffffb3;font-size:.8125rem}.footer-links a:hover{color:var(--gold)}.footer-contact a{color:#ffffffb3}
+@media(min-width:768px){.about-book{grid-template-columns:repeat(2,minmax(0,1fr));gap:48px}.author-grid{grid-template-columns:240px minmax(0,1fr);gap:40px}.formats-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:767px){.pullquote{padding-left:20px}.author-photo{width:200px;height:200px}.lightbox-overlay{padding:16px}.lightbox{padding:28px 24px}.format-card{padding:24px}.site-footer{padding:28px 0}}
+@media(prefers-reduced-motion:reduce){.format-card{transition:none}.format-card:hover{transform:none}}
+</style>
+</div>
