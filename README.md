@@ -1,8 +1,8 @@
 # Disappointing Grace — Look Inside
 
-Static Chapter 1 flipbook for DisappointingGrace.com. Publish the main branch root through GitHub Pages.
+Static Chapter 1 flipbook for DisappointingGrace.com. Publish the main branch root through GitHub Pages. Includes responsive spreads, swipe, arrow controls, a page selector, PDF and text alternatives, and flexible cover turns.
 
-Includes responsive spreads, swipe, arrow controls, a page selector, PDF and text alternatives, and flexible cover turns. Original flipbook pages 2, 3 and 17 are excluded from the page viewer. PDF and text links retain the supplied sample.
+Original flipbook pages 2, 3 and 17 are excluded from the page viewer. The PDF and plain-text alternatives also exclude the corresponding title page and “Keep Going” page. The added inside-cover page was only present in the flipbook. The downloadable PDF contains 14 original sample pages.
 
 ## Rights
 
