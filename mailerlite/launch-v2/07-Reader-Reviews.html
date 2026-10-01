@@ -1,0 +1,48 @@
+<div>
+<style>
+#reviews{background:var(--warm-white);padding:72px 0;color:var(--text-dark)}
+#reviews .dg-wrap{max-width:1080px;margin:auto;padding:0 24px}
+#reviews .dg-label{font:500 .75rem/1.5 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 12px}
+#reviews h2{font:italic 400 clamp(1.5rem,3.5vw,2.25rem)/1.3 Georgia,serif;text-align:center;margin:0 0 32px}
+#reviews .dg-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+#reviews .dg-card{background:var(--sand);border-radius:8px;padding:28px 24px;border-left:3px solid var(--gold);min-width:0}
+#reviews .dg-quote{font:italic 1.0625rem/1.65 Georgia,serif;color:var(--text-body);margin:0 0 12px}
+#reviews .dg-name{font:400 .8125rem/1.5 var(--sans);color:#666;margin:0}
+#reviews .dg-dots{display:none}
+#reviews.dg-ready .dg-grid{grid-template-columns:minmax(0,1fr);gap:0;touch-action:pan-y;cursor:pointer}
+#reviews.dg-ready .dg-card{grid-area:1/1;visibility:hidden}
+#reviews.dg-ready .dg-card.dg-active{visibility:visible}
+#reviews.dg-ready .dg-dots{display:flex;justify-content:center;align-items:center;margin-top:12px}
+#reviews .dg-dots button{border:0;background:transparent;padding:0;width:28px;height:32px;cursor:pointer;display:grid;place-items:center}
+#reviews .dg-dots button:after{content:"";width:6px;height:6px;border-radius:50%;background:#d8cbbb}
+#reviews .dg-dots button[aria-pressed="true"]:after{width:10px;height:10px;background:var(--gold)}
+#reviews .dg-dots button:focus-visible,#reviews .dg-grid:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+@media(max-width:767px){#reviews{padding:48px 0}#reviews h2{margin-bottom:24px}#reviews .dg-grid{grid-template-columns:minmax(0,1fr)}#reviews .dg-card{padding:24px 20px}}
+</style>
+<section id="reviews"><div class="dg-wrap">
+<p class="dg-label">From Those Who Read It First</p><h2>Real words from real readers</h2>
+<div class="dg-grid">
+<div class="dg-card"><p class="dg-quote">"It really hit my heart and brought me to those moments when I felt that despair. I can't wait to read the rest."</p><p class="dg-name">— Early reader</p></div>
+<div class="dg-card"><p class="dg-quote">"So many people are afraid to show vulnerability. Thank you for sharing and being real."</p><p class="dg-name">— Early reader</p></div>
+<div class="dg-card"><p class="dg-quote">"We would all be lying if we haven't felt disappointed by God at some point in our lives."</p><p class="dg-name">— Myles</p></div>
+<div class="dg-card"><p class="dg-quote">"Mission accomplished in a highly effective and powerful way! It drew me in instantly, and I can't wait to read the rest!"</p><p class="dg-name">— Early reader</p></div>
+<div class="dg-card"><p class="dg-quote">"Thank you for pouring out your honest heart. God wants to hear from His children, even through the anger."</p><p class="dg-name">— Early reader</p></div>
+<div class="dg-card"><p class="dg-quote">"If the rest of this book is anything like the first chapter, I can't wait to sit down and finish it in one sitting."</p><p class="dg-name">— Early reader</p></div>
+</div><div class="dg-dots" aria-label="Choose a review"></div></div></section>
+<script>
+(()=>{
+const r=document.getElementById('reviews');if(!r||r.dataset.swipe)return;r.dataset.swipe='1';
+const cards=[...r.querySelectorAll('.dg-card')],g=r.querySelector('.dg-grid'),d=r.querySelector('.dg-dots'),m=matchMedia('(max-width:767px)'),reduced=matchMedia('(prefers-reduced-motion:reduce)');
+let i=0,t,start=null;const stop=()=>clearInterval(t);
+const run=()=>{stop();if(m.matches&&!reduced.matches&&!document.hidden&&!start&&!r.contains(document.activeElement))t=setInterval(()=>show(i+1),3000)};
+const show=n=>{i=(n+cards.length)%cards.length;cards.forEach((c,k)=>{c.classList.toggle('dg-active',k===i);c.setAttribute('aria-hidden',String(k!==i))});[...d.children].forEach((b,k)=>b.setAttribute('aria-pressed',String(k===i)))};
+cards.forEach((c,k)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Show review '+(k+1));b.addEventListener('click',()=>{show(k);run()});d.appendChild(b)});
+r.classList.add('dg-ready');show(0);run();
+g.addEventListener('click',()=>{if(!m.matches){show(i+1);run()}});
+g.addEventListener('pointerdown',e=>{if(!m.matches||!e.isPrimary||(e.pointerType==='mouse'&&e.button!==0))return;start={x:e.clientX,y:e.clientY,id:e.pointerId};g.setPointerCapture?.(e.pointerId);stop()});
+g.addEventListener('pointerup',e=>{if(!start||start.id!==e.pointerId)return;const x=e.clientX-start.x,y=e.clientY-start.y;start=null;if(Math.abs(x)>40&&Math.abs(x)>Math.abs(y)*1.2)show(i+(x<0?1:-1));run()});
+g.addEventListener('pointercancel',()=>{start=null;run()});
+r.addEventListener('focusin',stop);r.addEventListener('focusout',()=>setTimeout(run,0));document.addEventListener('visibilitychange',run);m.addEventListener('change',()=>{start=null;show(i);run()});reduced.addEventListener('change',run);
+})();
+</script>
+</div>
