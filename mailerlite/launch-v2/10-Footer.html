@@ -4,4 +4,37 @@
 <ul class="footer-links"><li><a href="https://disappointinggrace.com/privacy">Privacy Policy</a></li><li><a href="https://disappointinggrace.com/terms">Terms of Service</a></li><li><a href="mailto:team@disappointinggrace.com">Contact</a></li></ul>
 <div>&copy; 2026 Disappointing Grace. All rights reserved.</div>
 </div></div></footer>
+<style>
+#dg-signup-dialog{margin:auto;width:calc(100% - 32px);max-width:480px;max-height:90vh;max-height:90dvh;overflow:auto;border:1px solid #c8963e;border-radius:12px;padding:36px;background:#faf8f4;color:#3d3d3d;box-shadow:0 24px 80px #0005;text-align:left}
+#dg-signup-dialog::backdrop{background:rgba(5,18,18,.82)}
+#dg-signup-dialog .dg-signup-close{position:absolute;right:10px;top:8px;width:44px;height:44px;border:0;background:none;color:#1a3a3a;font:28px/1 sans-serif;cursor:pointer}
+#dg-signup-dialog h2{font:italic 400 28px/1.25 Georgia,serif;margin:4px 24px 16px 0;color:#1a3a3a}
+#dg-signup-dialog p{font:16px/1.6 Georgia,serif;margin:0 0 20px}
+#dg-signup-dialog label{display:block;margin:0 0 8px;font:600 14px/1.4 var(--sans,system-ui);color:#1a3a3a}
+#dg-signup-dialog input[type=email]{width:100%;min-height:48px;border:1px solid #b6beb9;border-radius:6px;background:#fff;padding:12px;font:16px/1.4 var(--sans,system-ui);color:#2a2a2a}
+#dg-signup-dialog .ml-form-embedSubmit button{width:100%;min-height:48px;margin-top:20px;border:0;border-radius:6px;background:linear-gradient(110deg,#c8963e,#d4a84f);color:#1a3a3a;padding:12px 16px;font:600 16px/1.4 var(--sans,system-ui);cursor:pointer}
+#dg-signup-dialog .ml-form-embedSubmit button:disabled{opacity:.65;cursor:wait}
+#dg-signup-dialog .dg-signup-privacy{font:12px/1.6 var(--sans,system-ui);color:#626a65;margin:16px 0 0}
+#dg-signup-dialog a{text-decoration:underline;color:#6b501c}
+#dg-signup-dialog :focus-visible{outline:2px solid #8c6625;outline-offset:3px}
+#dg-signup-dialog .ml-error input{border:2px solid #ae2d2d}
+#dg-signup-dialog .ml-error .label-description,#dg-signup-dialog .ml-error .label-description p{color:#ae2d2d;font:14px/1.5 system-ui;margin:6px 0}
+@media(max-width:480px){#dg-signup-dialog{padding:32px 24px 28px}#dg-signup-dialog h2{font-size:26px}}
+</style>
+<dialog id="dg-signup-dialog" aria-labelledby="dg-signup-title">
+<button class="dg-signup-close" type="button" aria-label="Close signup">×</button>
+<div id="mlb2-46614030" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-46614030"><div class="ml-form-align-center"><div class="ml-form-embedWrapper embedForm">
+<div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+<div class="ml-form-embedContent"><h2 id="dg-signup-title">Get the free eBook &amp; audiobook</h2><p>Receive the full story to read or listen to, plus occasional updates from Dave.</p></div>
+<form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2488860/forms/200154132057687272/subscribe" data-code="" method="post" target="_blank">
+<div class="ml-form-formContent"><div class="ml-form-fieldRow ml-last-item"><div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+<label for="dg-signup-email">Email address</label><input id="dg-signup-email" aria-required="true" required type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="you@example.com" autocomplete="email">
+</div></div></div>
+<input type="hidden" name="ml-submit" value="1"><div class="ml-form-embedSubmit"><button type="submit" class="primary">Send me the free book &amp; audio</button><button disabled style="display:none" type="button" class="loading">Signing you up…</button></div><input type="hidden" name="anticsrf" value="true">
+<div class="ml-form-embedPermissions"><div class="ml-form-embedPermissionsContent default privacy-policy"><p class="dg-signup-privacy">Unsubscribe anytime. <a href="https://disappointinggrace.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>.</p></div></div>
+</form></div>
+<div class="ml-form-successBody row-success" style="display:none" role="status" tabindex="-1"><div class="ml-form-successContent"><h2>You’re on the list.</h2><p>Check your inbox for next steps. If you receive a confirmation email, confirm your address first.</p></div></div>
+</div></div></div></dialog>
+<script>function ml_webform_success_46614030(){const f=document.getElementById('mlb2-46614030');f.querySelector('.row-form').style.display='none';const s=f.querySelector('.row-success');s.style.display='block';s.focus()}</script>
+<script src="https://groot.mailerlite.com/js/w/webforms.min.js?v83147fa8ce2d95cb73ece7f28b469519" defer></script>
 </div>
