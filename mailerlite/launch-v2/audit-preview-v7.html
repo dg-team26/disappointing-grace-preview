@@ -1,0 +1,317 @@
+<html><head><meta name="viewport" content="width=device-width,initial-scale=1"></head><body><div class="ml-code-html"><div>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;--deep-green:#1a3a3a;--dark-green:#243f3f;--mid-green:#2d5a5a;--sand:#f5f0e8;--warm-white:#faf8f4;--gold:#c8963e;--gold-light:#d4a84f;--text-dark:#2a2a2a;--text-body:#3d3d3d;--text-light:#f5f0e8;--text-muted:#7a7a7a;--border-light:rgba(0,0,0,.08)}
+html{scroll-behavior:smooth}body{font-family:Georgia,'Times New Roman',serif;color:var(--text-body);background:var(--warm-white);font-size:1.0625rem;line-height:1.7;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}a{color:var(--gold);text-decoration:none;transition:color .2s}a:hover{color:var(--gold-light)}
+.container{max-width:1080px;margin:0 auto;padding:0 24px}
+.site-nav{background:var(--deep-green);padding:14px 0;position:sticky;top:0;z-index:100;border-bottom:2px solid var(--gold)}
+.site-nav .container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}.site-nav__logo{height:40px;width:auto}.site-nav__links{display:flex;gap:24px;list-style:none;flex-wrap:wrap}
+.site-nav__links a{color:var(--sand);font:400 .875rem/1.5 var(--sans);letter-spacing:.04em;text-transform:uppercase;opacity:.9}.site-nav__links a:hover{opacity:1;color:var(--gold)}
+.hero{background:linear-gradient(170deg,var(--deep-green),var(--dark-green) 60%,var(--mid-green));color:var(--text-light);padding:64px 0 72px}
+.hero__inner{display:flex;flex-direction:column;align-items:center;gap:32px;text-align:center}.hero__cover{flex-shrink:0}
+.hero__cover img{width:260px;border-radius:4px;box-shadow:0 16px 48px #0005;transition:transform .4s,box-shadow .4s}
+.hero__cover img:hover{transform:scale(1.03);box-shadow:0 24px 64px #0007}.hero__text{max-width:540px;min-width:0;width:100%}
+.hero__eyebrow,.section__eyebrow{font:500 .75rem/1.5 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.hero h1{font:italic 400 clamp(2rem,5vw,3rem)/1.25 Georgia,serif;display:block;width:fit-content;max-width:100%;margin:0 auto 12px;background:linear-gradient(90deg,#f5f0e8 30%,#d4a84f 42%,#ffd98e 48%,#ffecc8 50%,#ffd98e 52%,#d4a84f 58%,#f5f0e8 70%);background-size:300% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero h1:hover{background-position:0% 0;transition:background-position 1.8s ease-in-out}
+.hero__subtitle{font:400 .9375rem/1.5 var(--sans);letter-spacing:.04em;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
+.hero__desc{font-size:1.0625rem;line-height:1.7;opacity:.92;margin-bottom:28px}
+.hero__cta,.dg-email-button{display:inline-block;background:var(--gold);color:var(--deep-green);font:600 1rem/1.5 var(--sans);padding:12px 32px;border-radius:6px;letter-spacing:.04em;transition:background .2s;position:relative;overflow:hidden}
+.hero__cta:hover,.dg-email-button:hover{background:var(--gold-light);color:var(--deep-green)}
+.hero__cta::after{content:'';position:absolute;top:0;left:-100%;width:50%;height:100%;background:linear-gradient(90deg,transparent,#ffffff40,transparent)}
+.hero__cta:hover::after{left:100%;transition:left .8s ease}
+.section{padding:72px 0}.section--sand{background:var(--sand)}.section--white{background:var(--warm-white)}.section--dark{background:var(--deep-green);color:var(--text-light)}
+.section h2{font:italic 400 clamp(1.5rem,3.5vw,2.25rem)/1.3 Georgia,serif;margin-bottom:24px}
+.section p{max-width:680px;margin-bottom:20px;font-size:1.0625rem}.section p:last-child{margin-bottom:0}.section .section__eyebrow{font-size:.75rem;margin-bottom:12px}
+.storm-quote{background:var(--deep-green);color:var(--text-light);padding:48px 0;text-align:center}
+.storm-quote blockquote{font:italic clamp(1.25rem,3vw,1.75rem)/1.5 Georgia,serif;max-width:640px;margin:auto}
+.storm-quote cite{display:block;margin-top:12px;font-size:.875rem;font-style:normal;color:var(--gold)}
+html,body{background:#1a3a3a!important;overflow-x:hidden}
+section[id]{scroll-margin-top:96px}
+@media(min-width:768px){.hero__inner{flex-direction:row;text-align:left;gap:56px}.hero__cover img{width:300px}.hero h1{margin-left:0;margin-right:0}}
+@media(max-width:767px){.site-nav{padding:10px 0}.site-nav__logo{height:48px}.hero{padding:32px 0 48px}.section{padding:48px 0}.storm-quote{padding:40px 0}:is(#Simple-content-1,#One-column) .list-group-item:first-child>div{padding-bottom:0!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero__cover img,.hero h1,.hero__cta::after{transition:none!important;transform:none!important}}
+.hero #dg-audio-player.dg-audio .dg-audio__title{font-family:var(--sans)!important;font-weight:500!important;letter-spacing:.12em!important}
+</style>
+</div>
+</div><div class="ml-code-html"><div>
+<style>
+.about-book{display:grid;grid-template-columns:minmax(0,1fr);gap:32px;align-items:start}
+.pullquote{border-left:3px solid var(--gold);padding:16px 0 16px 24px;margin:0 0 24px;font-size:1.125rem;font-style:italic;line-height:1.6;color:var(--text-dark);max-width:680px}
+.pullquote:last-child{margin-bottom:0}.pullquote cite,.dg-quote-credit{display:block;margin-top:12px;font:400 .875rem/1.5 var(--sans);color:var(--gold)}
+.author-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:32px;align-items:center}
+.author-photo{width:220px;height:220px;border-radius:50%;object-fit:cover;border:4px solid #ffffff40;margin:auto;box-shadow:0 8px 32px #0005}
+.mission-photo{width:100%;max-width:680px;border-radius:8px;margin:32px auto 0;box-shadow:0 8px 32px #0003;border:2px solid #c8963e33}
+.formats-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;margin-top:32px}
+.format-card{background:#fff;border:1px solid var(--border-light);border-radius:8px;padding:28px 24px;text-align:center;min-width:0;transition:transform .3s,box-shadow .3s}
+.format-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px #0000001a}
+.format-card__icon{display:flex;justify-content:center;margin-bottom:16px}.format-card__icon img{width:40px;height:40px}
+.format-card h3{font:600 1rem/1.5 var(--sans);margin-bottom:8px;color:var(--text-dark)}
+.section .format-card p{font-size:.9375rem;line-height:1.65;color:#666;max-width:100%;margin:0 auto}
+.mission-text{text-align:center;max-width:640px;margin:auto}.mission-text p{margin-left:auto;margin-right:auto}
+.dg-centered{text-align:center}.dg-centered p{margin-left:auto;margin-right:auto}
+.section .dg-accent-quote{font-size:1.125rem;font-style:italic;color:var(--gold);margin-top:24px}
+.dg-pif-cover{margin:28px auto;max-width:420px}.dg-pif-cover img{width:100%;border-radius:4px}
+.section .dg-formats-note{margin:28px auto 0;font-size:.9375rem;color:#666;max-width:560px}
+.dg-contact-action{margin-top:24px}.dg-contact-email{margin-top:12px;font:400 .875rem/1.5 var(--sans);color:#666}
+.site-footer{background:var(--deep-green);color:#ffffffb3;padding:32px 0;font:400 .8125rem/1.6 var(--sans)}
+.footer-inner{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}.footer-logo{height:48px;width:auto;opacity:.85}
+.footer-links{display:flex;gap:12px 24px;list-style:none;flex-wrap:wrap;justify-content:center}.footer-links a{color:#ffffffb3;font-size:.8125rem}.footer-links a:hover{color:var(--gold)}.footer-contact a{color:#ffffffb3}
+@media(min-width:768px){.about-book{grid-template-columns:repeat(2,minmax(0,1fr));gap:48px}.author-grid{grid-template-columns:240px minmax(0,1fr);gap:40px}.formats-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:767px){.pullquote{padding-left:20px}.author-photo{width:200px;height:200px}.site-footer{padding:28px 0}}
+@media(prefers-reduced-motion:reduce){.format-card{transition:none}.format-card:hover{transform:none}}
+.dg-free-link{margin:14px 0 0!important;font:500 .9375rem/1.5 var(--sans)!important}.dg-free-link a{color:var(--gold-light);text-decoration:underline;text-underline-offset:4px}.dg-choice-note{font:400 .8125rem/1.6 var(--sans);opacity:.8;margin:12px 0 0;max-width:440px}.dg-featured{border:2px solid var(--gold)}.format-card{display:flex;flex-direction:column;align-items:center}.format-card .hero__cta,.format-card .dg-outline-button{margin-top:24px;font-size:.9375rem;padding:10px 20px}.dg-outline-button{display:inline-block;border:1px solid var(--gold);border-radius:6px;color:var(--deep-green);font:600 1rem/1.5 var(--sans)}.section .dg-format-label{font:500 .75rem/1.5 var(--sans);text-transform:uppercase;letter-spacing:.08em;color:#86621f;margin-bottom:12px}.section .dg-availability{margin-top:24px;font:400 .8125rem/1.5 var(--sans);color:#666}.dg-faq{max-width:760px}.dg-faq details{border-bottom:1px solid var(--border-light);padding:18px 0}.dg-faq summary{font:600 1rem/1.5 var(--sans);cursor:pointer;color:var(--deep-green)}.dg-faq details p{font-size:1rem;margin:14px 0 0}.dg-choice-note{margin-left:auto;margin-right:auto}a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--gold);outline-offset:4px}@media(min-width:768px){.hero .dg-choice-note{margin-left:0}}
+</style>
+</div>
+</div><div class="ml-code-html"><div>
+<style>#dg-header .dg-menu-toggle{display:none;background:transparent;border:1px solid #c8963e;border-radius:6px;color:#f5f0e8;width:44px;height:44px;font:28px/1 sans-serif;cursor:pointer;padding:0}#dg-header .dg-menu-toggle:focus-visible{outline:2px solid #c8963e;outline-offset:3px}#dg-header .site-nav__links[hidden]{display:none!important}@media(max-width:767px){#dg-header .container{flex-direction:row;justify-content:space-between;align-items:center;gap:12px}#dg-header .site-nav__logo{height:48px;width:auto;max-width:calc(100% - 60px)}#dg-header.dg-menu-ready .dg-menu-toggle{display:block}#dg-header .site-nav__links{flex-basis:100%;flex-direction:column;align-items:stretch;gap:0;text-align:left;padding-top:8px;list-style:none}#dg-header .site-nav__links a{display:block;padding:10px 0;font-size:14px;letter-spacing:.04em}}.dg-cover-link{display:block;width:fit-content;margin:auto}.dg-look-inside{display:block;width:fit-content;margin:16px auto 0;padding:8px 20px;border:1px solid #c8963e;border-radius:6px;font:14px/1.5 var(--sans);color:#f5f0e8;text-align:center}.dg-look-inside:hover{background:#243f3f;color:#d4a84f}</style>
+<nav class="site-nav" id="dg-header" aria-label="Primary navigation">
+<div class="container">
+<img src="https://storage.mlcdn.com/account_image/2488860/q18JzUWf01eLtsjdPpLtUej7qXzaFVJuYlCJJXI1.png" alt="Disappointing Grace" class="site-nav__logo">
+<button class="dg-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="dg-nav-links">☰</button>
+<ul class="site-nav__links" id="dg-nav-links">
+<li>
+<a href="#about-book">The Book</a>
+</li>
+<li>
+<a href="#reviews">Reviews</a>
+</li>
+<li>
+<a href="#author">About Dave</a>
+</li>
+<li>
+<a href="#formats">Formats</a>
+</li>
+<li>
+<a href="#mission">The Mission</a>
+</li>
+<li>
+<a href="#contact">Contact</a>
+</li>
+</ul>
+</div>
+</nav>
+<section class="hero">
+<div class="container">
+<div class="hero__inner">
+<div class="hero__cover">
+<a href="https://dg-team26.github.io/disappointing-grace-preview/" class="dg-cover-link" data-dg-preview target="_blank" rel="noopener" aria-label="Look inside Disappointing Grace">
+<img src="https://storage.mlcdn.com/account_image/2488860/ECYPsPkBMhHZcZWN4XO7SAVbwOfpyLW7yVjIUkiY.jpg" alt="Disappointing Grace book cover — a figure standing on a weathered ship, looking toward the sunrise">
+</a>
+<a href="https://dg-team26.github.io/disappointing-grace-preview/" class="dg-look-inside" data-dg-preview target="_blank" rel="noopener">Look inside ↗</a>
+</div>
+<div class="hero__text">
+<p class="hero__eyebrow">A Book by Dave Fleet</p>
+<h1>Disappointing Grace</h1>
+<p class="hero__subtitle">When Desperate Prayers Go Unanswered</p>
+<p class="hero__desc">Have you ever prayed desperately and heard nothing? Dave Fleet built a multimillion-dollar company, lost it all, and nearly quit. Standing in the wreckage, he found a different kind of grace. This is that story.</p>
+<a href="#formats" class="hero__cta" data-dg-link="amazon">Get the Kindle Edition on Amazon</a>
+<p class="dg-free-link"><a href="#formats" data-dg-link="free">Read or listen free &rarr;</a></p>
+<p class="dg-choice-note">Prefer Kindle? Your purchase helps support the launch. The full eBook and audiobook are also available free.</p>
+<div class="dg-audio" id="dg-audio-player">
+<p class="dg-audio__title">Listen to Chapter 1</p>
+<audio controls preload="metadata" aria-label="Chapter 1 audio preview">
+<source src="https://dg-team26.github.io/disappointing-grace-preview/chapter-1-audio.mp3" type="audio/mpeg">
+</audio>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="storm-quote">
+<div class="container">
+<blockquote>"I didn't want His grace to see me through another day in the storm. I needed God to stop the storm."<cite>Dave Fleet, <em>Disappointing Grace</em>
+</cite>
+</blockquote>
+</div>
+</div>
+<script src="https://dg-team26.github.io/disappointing-grace-preview/mailerlite/launch-v2/page-ui.js?v=2.2" defer></script>
+<script src="https://dg-team26.github.io/disappointing-grace-preview/mailerlite/audio-gold-v3.js" defer>
+</script>
+</div>
+</div><div class="ml-code-html"><div>
+<style>
+#dg-preview-dialog{padding:0;border:1px solid #c8963e;border-radius:10px;background:#1a3a3a;color:#f5f0e8;width:96vw;max-width:1240px;height:92vh;height:92dvh;max-height:96vh;max-height:96dvh;margin:auto;overflow:hidden;z-index:10000}
+#dg-preview-dialog::backdrop{background:rgba(5,18,18,.88)}
+#dg-preview-dialog .dg-preview-shell{display:flex;flex-direction:column;height:100%}
+#dg-preview-dialog .dg-preview-bar{display:flex;align-items:center;justify-content:flex-end;gap:12px;padding:0 8px;border-bottom:1px solid #476060;font:14px var(--sans)}
+#dg-preview-dialog .dg-preview-bar button{background:transparent;border:1px solid #c8963e;border-radius:5px;color:#f5f0e8;cursor:pointer;width:44px;height:44px;font:24px var(--sans)}
+#dg-preview-dialog iframe{display:block;border:0;width:100%;flex:1;min-height:0;background:#1a3a3a}
+#dg-preview-dialog .dg-preview-fallback{padding:5px 12px 8px;text-align:center;font:12px/1.5 var(--sans)}
+#dg-preview-dialog a{color:#d4a84f}
+#dg-preview-dialog button:focus-visible{outline:2px solid #ffd98e;outline-offset:2px}
+@media(max-width:600px){#dg-preview-dialog{width:100vw;height:100vh;height:100dvh;max-width:100vw;max-height:100vh;max-height:100dvh;border:0;border-radius:0}#dg-preview-dialog .dg-preview-bar{padding:0 4px}}
+</style>
+<dialog id="dg-preview-dialog" aria-labelledby="dg-preview-title">
+<div class="dg-preview-shell"><div class="dg-preview-bar"><span id="dg-preview-title" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;">Look inside the book</span><button type="button" aria-label="Close book preview">×</button></div>
+<iframe title="Disappointing Grace book preview" allow="fullscreen" allowfullscreen></iframe>
+</div>
+</dialog>
+<script>
+(()=>{
+const d=document.getElementById('dg-preview-dialog');if(!d||!d.showModal||d.dataset.ready)return;d.dataset.ready='1';
+const frame=d.querySelector('iframe'),close=d.querySelector('button'),url='https://dg-team26.github.io/disappointing-grace-preview/';let opener,overflow;
+document.addEventListener('click',e=>{const a=e.target.closest('[data-dg-preview]');if(!a||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey||e.button!==0)return;e.preventDefault();if(d.open)return;opener=a;overflow=document.body.style.overflow;document.body.style.overflow='hidden';if(!frame.src)frame.src=url;d.showModal();close.focus()});
+close.addEventListener('click',()=>d.close());d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close()}});
+d.addEventListener('close',()=>{document.body.style.overflow=overflow||'';if(opener?.isConnected)opener.focus()});
+window.addEventListener('message',e=>{if(e.origin===new URL(url).origin&&e.source===frame.contentWindow&&e.data?.type==='dg-preview-close'&&d.open)d.close()});
+})();
+</script>
+</div>
+</div><div class="ml-code-html"><div><style> .dg-hero-reviews{background:var(--sand);padding:40px 0;text-align:center;color:var(--text-dark)}.dg-hero-reviews__inner{max-width:720px;margin:auto;padding:0 24px}.dg-hero-reviews__label{font:500 .75rem/1.5 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}.dg-hero-reviews__slides{display:grid;align-items:center;min-height:128px}.dg-hero-reviews__slide{grid-area:1/1;visibility:hidden}.dg-hero-reviews__slide.dg-active{visibility:visible;}.dg-hero-reviews__mark{display:block;font:40px/1 Georgia,serif;color:var(--gold);opacity:.6;margin-bottom:8px}.dg-hero-reviews__quote{font:italic clamp(1.25rem,3vw,1.75rem)/1.5 Georgia,serif;margin-bottom:12px}.dg-hero-reviews__credit{font:400 .8125rem/1.5 var(--sans);color:#666}.dg-hero-reviews__dots{display:flex;align-items:center;justify-content:center;margin-top:12px}.dg-hero-reviews__dots button{background:none;border:0;width:28px;height:32px;padding:0;cursor:pointer;display:grid;place-items:center}.dg-hero-reviews__dots button:after{content:"";width:6px;height:6px;border-radius:50%;background:#d8cbbb}.dg-hero-reviews__dots button[aria-pressed="true"]:after{width:10px;height:10px;background:var(--gold)}.dg-hero-reviews__dots button:focus-visible{outline:2px solid var(--gold);outline-offset:1px;border-radius:4px}@media(max-width:767px){.dg-hero-reviews{padding:32px 0}}@media(prefers-reduced-motion:reduce){.dg-hero-reviews__slide.dg-active{animation:none}}.dg-hero-reviews .dg-hero-reviews__dots{display:block!important;width:140px;margin:16px auto 0;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}.dg-hero-reviews .dg-hero-reviews__slide.dg-active{animation:dgReviewFade .45s ease!important}[data-dg-carousel] .dg-dot-track{display:flex;width:max-content;transition:transform .4s ease}[data-dg-carousel] .dg-dot-track button{flex:0 0 28px!important;min-width:28px!important;opacity:1!important}[data-dg-carousel] .dg-dot-track button:after{transition:width .3s,height .3s,background .3s}[data-dg-carousel] .dg-dot-track button[aria-pressed="true"]:after{width:10px!important;height:10px!important;background:#c8963e!important}@keyframes dgReviewFade{from{opacity:0}to{opacity:1}}@media(prefers-reduced-motion:reduce){[data-dg-carousel] .dg-dot-track{transition:none!important}[data-dg-carousel] .dg-active{animation:none!important}}</style><section data-dg-carousel="highlights" class="dg-hero-reviews" aria-label="Early reader highlights" aria-roledescription="carousel"><div class="dg-hero-reviews__inner"><p class="dg-hero-reviews__label">What Early Readers Are Saying</p><div class="dg-hero-reviews__slides"><div class="dg-hero-reviews__slide dg-active"><span class="dg-hero-reviews__mark" aria-hidden="true">&ldquo;</span><p class="dg-hero-reviews__quote">I couldn't put it down.</p><p class="dg-hero-reviews__credit">— Early reader</p></div><div class="dg-hero-reviews__slide" aria-hidden="true"><span class="dg-hero-reviews__mark" aria-hidden="true">&ldquo;</span><p class="dg-hero-reviews__quote">It catches you right to the core of your heart.</p><p class="dg-hero-reviews__credit">— Early reader</p></div><div class="dg-hero-reviews__slide" aria-hidden="true"><span class="dg-hero-reviews__mark" aria-hidden="true">&ldquo;</span><p class="dg-hero-reviews__quote">A page turner!</p><p class="dg-hero-reviews__credit">— Early reader</p></div><div class="dg-hero-reviews__slide" aria-hidden="true"><span class="dg-hero-reviews__mark" aria-hidden="true">&ldquo;</span><p class="dg-hero-reviews__quote">You have no idea how much I can relate.</p><p class="dg-hero-reviews__credit">— Early reader</p></div><div class="dg-hero-reviews__slide" aria-hidden="true"><span class="dg-hero-reviews__mark" aria-hidden="true">&ldquo;</span><p class="dg-hero-reviews__quote">Just what I need right now.</p><p class="dg-hero-reviews__credit">— Early reader</p></div><div class="dg-hero-reviews__slide" aria-hidden="true"><span class="dg-hero-reviews__mark" aria-hidden="true">&ldquo;</span><p class="dg-hero-reviews__quote">It was very captivating.</p><p class="dg-hero-reviews__credit">— Early reader</p></div><div class="dg-hero-reviews__slide" aria-hidden="true"><span class="dg-hero-reviews__mark" aria-hidden="true">&ldquo;</span><p class="dg-hero-reviews__quote">Engaging for sure!</p><p class="dg-hero-reviews__credit">— Early reader</p></div><div class="dg-hero-reviews__slide" aria-hidden="true"><span class="dg-hero-reviews__mark" aria-hidden="true">&ldquo;</span><p class="dg-hero-reviews__quote">It leaves me wanting to read more!</p><p class="dg-hero-reviews__credit">— Early reader</p></div></div><div class="dg-hero-reviews__dots" aria-label="Choose a reader highlight"></div></div></section><script src="https://dg-team26.github.io/disappointing-grace-preview/mailerlite/launch-v2/reviews-v6.js" defer></script></div>
+</div><div class="ml-code-html"><div>
+<section id="about-book" class="section section--white">
+<div class="container"><div class="about-book"><div>
+<p class="section__eyebrow">About the Book</p><h2>Raw, direct, and honest.</h2>
+<p>Dave was the guy everyone came to for answers. Then his own life blew up. Facing loss, shame, and silence from God, he nearly gave up. <em>Disappointing Grace</em> is the simple roadmap God used to help him climb out.</p>
+<p>This isn't a theological argument or a self-help formula. It's the story of a phone call with his father, a wife who didn't leave, a friend who showed up, a church that stayed, and a God who met him again — not by fixing everything, but by not letting go.</p>
+<p>It's short. You can read it in a couple of sittings, or listen to the audiobook — read by Dave in his own voice — on one long drive. It includes a reader's guide for personal reflection or group study.</p>
+</div><div>
+<blockquote class="pullquote">"I was there when his world fell apart. I watched a man who had built something significant see it collapse under him. I watched him walk through shame, financial ruin, and a legal nightmare that threatened to take everything. Here is what I never saw: I never saw Dave walk away."<cite>— Rev. Dr. Matthew Pickering, from the Foreword</cite></blockquote>
+<blockquote class="pullquote">"Dave didn't write this book from a comfortable distance. He wrote it from inside the fire."<cite>— Rev. Dr. Matthew Pickering</cite></blockquote>
+</div></div></div></section>
+<section class="section section--sand"><div class="container">
+<p class="section__eyebrow">Who This Book Is For</p><h2>If you've ever prayed hard and God still felt silent</h2>
+<p>This book was written for people who are hurting quietly. People who've drifted from God, or from church, or from both, and just need somebody to say: <em>me too — and there's a way back.</em></p>
+<p>It's for the person up at midnight wondering if faith still works when life falls apart. For the spouse carrying something alone. For the friend who doesn't know what to say.</p>
+<p>In Dave's words: <em>"I beg you to come out of your silent isolation and take a journey with me. If you never expected life to be as hard as yours is right now, this short read will lead you to the medicine you need."</em></p>
+</div></section>
+<section class="section section--dark"><div class="container"><div class="mission-text">
+<p class="section__eyebrow">What You'll Discover</p><h2>A roadmap through the wreckage</h2>
+<p>Why your doubt — and even anger at God — might be the very doorway He's been waiting for you to walk through. The three paths every broken person faces, and how two of them quietly poison your soul. Honest, realistic, and simple action steps you can use today, even with zero strength left, to begin getting your life back.</p>
+<p class="dg-accent-quote">"Standing in the wreckage, he found a different kind of grace."</p>
+</div></div></section>
+</div>
+</div><div class="ml-code-html"><div><style>#reviews{background:var(--warm-white);padding:72px 0;color:var(--text-dark)}#reviews .dg-wrap{max-width:1080px;margin:auto;padding:0 24px}#reviews .dg-label{font:500 .75rem/1.5 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 12px}#reviews h2{font:italic 400 clamp(1.5rem,3.5vw,2.25rem)/1.3 Georgia,serif;text-align:center;margin:0 0 32px}#reviews .dg-grid{display:grid;grid-template-columns:1fr;touch-action:pan-y;cursor:pointer}#reviews .dg-card{background:var(--sand);border-radius:8px;padding:28px 24px;border-left:3px solid var(--gold);min-width:0}#reviews.dg-ready .dg-card{grid-area:1/1;visibility:hidden}#reviews.dg-ready .dg-card.dg-active{visibility:visible}#reviews .dg-quote{font:italic 1.0625rem/1.65 Georgia,serif;color:var(--text-body);margin:0 0 12px}#reviews .dg-name{font:.8125rem/1.5 var(--sans);color:#666;margin:0}#reviews .dg-dots button{border:0;background:none;padding:0;width:28px;height:32px;cursor:pointer;display:grid;place-items:center}#reviews .dg-dots button:after{content:"";width:6px;height:6px;border-radius:50%;background:#d8cbbb}@media(max-width:767px){#reviews{padding:48px 0}#reviews .dg-card{padding:24px 20px}}#reviews.dg-ready .dg-dots{display:block!important;width:140px;margin:16px auto 0;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}#reviews.dg-ready .dg-card.dg-active{animation:dgReviewFade .45s ease!important}[data-dg-carousel] .dg-dot-track{display:flex;width:max-content;transition:transform .4s ease}[data-dg-carousel] .dg-dot-track button{flex:0 0 28px!important;min-width:28px!important;opacity:1!important}[data-dg-carousel] .dg-dot-track button:after{transition:width .3s,height .3s,background .3s}[data-dg-carousel] .dg-dot-track button[aria-pressed="true"]:after{width:10px!important;height:10px!important;background:#c8963e!important}@keyframes dgReviewFade{from{opacity:0}to{opacity:1}}@media(prefers-reduced-motion:reduce){[data-dg-carousel] .dg-dot-track{transition:none!important}[data-dg-carousel] .dg-active{animation:none!important}}</style><section data-dg-carousel="reviews" id="reviews"><div class="dg-wrap"><p class="dg-label">From Those Who Read It First</p><h2>Real words from real readers</h2><div class="dg-grid"><div class="dg-card"><p class="dg-quote">"It really hit my heart and brought me to those moments when I felt that despair. I can't wait to read the rest."</p><p class="dg-name">— Early reader</p></div><div class="dg-card"><p class="dg-quote">"So many people are afraid to show vulnerability. Thank you for sharing and being real."</p><p class="dg-name">— Early reader</p></div><div class="dg-card"><p class="dg-quote">"We would all be lying if we haven't felt disappointed by God at some point in our lives."</p><p class="dg-name">— Myles</p></div><div class="dg-card"><p class="dg-quote">"Mission accomplished in a highly effective and powerful way! It drew me in instantly, and I can't wait to read the rest!"</p><p class="dg-name">— Early reader</p></div><div class="dg-card"><p class="dg-quote">"Thank you for pouring out your honest heart. God wants to hear from His children, even through the anger."</p><p class="dg-name">— Early reader</p></div><div class="dg-card"><p class="dg-quote">"If the rest of this book is anything like the first chapter, I can't wait to sit down and finish it in one sitting."</p><p class="dg-name">— Early reader</p></div><div class="dg-card"><p class="dg-quote">&ldquo;I was reading about myself, my self-doubt, my recent life.&rdquo;</p><p class="dg-name">— Early reader</p></div><div class="dg-card"><p class="dg-quote">&ldquo;I can identify with you when life doesn’t make sense and you’re crying out to God and He answers differently than what you were believing and hoping for.&rdquo;</p><p class="dg-name">— Early reader</p></div><div class="dg-card"><p class="dg-quote">&ldquo;An up close and personal look into what many have been and are dealing with in their faith journey.&rdquo;</p><p class="dg-name">— Early reader</p></div><div class="dg-card"><p class="dg-quote">&ldquo;I hope others also find a way to apply the hard lessons learned by another to their own personal life.&rdquo;</p><p class="dg-name">— Early reader</p></div><div class="dg-card"><p class="dg-quote">&ldquo;…letting them work through the storm with Him beside them, not fixing the storm for them.&rdquo;</p><p class="dg-name">— Early reader</p></div><div class="dg-card"><p class="dg-quote">&ldquo;I'm sure it will encourage others.&rdquo;</p><p class="dg-name">— Early reader</p></div></div><div class="dg-dots" aria-label="Choose a review"></div></div></section><script src="https://dg-team26.github.io/disappointing-grace-preview/mailerlite/launch-v2/reviews-v6.js" defer></script></div>
+</div><div class="ml-code-html"><div>
+<section id="author" class="section section--dark"><div class="container"><div class="author-grid">
+<img src="https://storage.mlcdn.com/account_image/2488860/TLLli0GENf1Qwtv9GHAFSQKiQo0jCd6dMArGokP4.jpg" alt="Dave Fleet" class="author-photo">
+<div><p class="section__eyebrow">About the Author</p><h2>Dave Fleet</h2>
+<p>Dave built a multimillion-dollar company, lost it all, nearly quit — but then found God in the ashes. He was put back together by Jesus, a faithful wife, and people who refused to let him stay broken.</p>
+<p>Now he spends his life helping others find their way back. He wrote <em>Disappointing Grace</em> because he believes there are a lot of people hurting quietly who've drifted from God and just need someone to say, <em>"me too."</em> The audiobook is read in his own voice, because some things land better heard than read.</p>
+<p class="dg-accent-quote">"If my story helps even one person stop hiding and start healing — it was worth telling."</p>
+</div></div></div></section>
+<section id="formats" class="section section--sand"><div class="container dg-centered">
+<p class="section__eyebrow">Choose How to Read</p><h2>One story. A way for everyone to read it.</h2>
+<p style="max-width:600px">Get the Kindle edition or pre-order the paperback on Amazon. The full eBook and audiobook are also free through BookFunnel.</p>
+<div class="formats-grid">
+<div class="format-card dg-featured"><p class="dg-format-label">Support the Launch</p><h3>Kindle Edition</h3><p>Keep the book in your Kindle library and read in the Kindle app or on your Kindle device.</p><a href="#formats" class="hero__cta" data-dg-link="amazon">Get it on Amazon</a></div>
+<div class="format-card"><p class="dg-format-label">Free for Everyone</p><h3>eBook &amp; Audiobook</h3><p>Sign up to receive the full eBook and audiobook by email. Delivered through BookFunnel.</p><a href="#formats" class="dg-outline-button" data-dg-link="free">Read or listen free</a></div>
+<div class="format-card"><p class="dg-format-label">Print Edition</p><h3>Paperback</h3><p>A copy to hold, mark up, or pass along to someone in a hard season.</p><a href="#formats" class="dg-outline-button" data-dg-link="paperback">Pre-order on Amazon</a></div>
+</div>
+</div></section>
+<section id="questions" class="section section--white"><div class="container dg-faq">
+<p class="section__eyebrow">A Few Questions</p><h2>Before you begin</h2>
+<details><summary>Can I get the whole book free?</summary><p>Yes. Choose “Read or listen free” and enter your email. The full digital eBook and audiobook are delivered through BookFunnel. You’ll also receive occasional updates from Dave and can unsubscribe anytime. The Kindle edition is a separate purchase on Amazon for readers who prefer that option and want to support the launch.</p></details>
+<details><summary>Do I need a Kindle device?</summary><p>No. You can read the Kindle edition using Amazon's Kindle app on a phone or tablet, as well as on a Kindle device.</p></details>
+<details><summary>Can I try it before choosing a format?</summary><p>Yes. <a href="https://dg-team26.github.io/disappointing-grace-preview/" data-dg-preview target="_blank" rel="noopener">Look inside the book</a> or listen to the Chapter 1 audio preview near the top of this page.</p></details>
+<details><summary>Is this for someone who has drifted from church?</summary><p>Yes. Dave wrote for people who are hurting quietly, wrestling with unanswered prayer, or unsure how to find their way back. His story points toward Jesus and the people who can walk alongside you.</p></details>
+<details><summary>Can we use it with a group?</summary><p>The book includes a reader's guide for personal reflection or group discussion. For church, ministry, or bulk-copy questions, <a href="mailto:team@disappointinggrace.com">contact the team</a>.</p></details>
+</div></section>
+</div>
+</div><div class="ml-code-html"><div>
+<section id="mission" class="section section--dark"><div class="container"><div class="mission-text">
+<p class="section__eyebrow">The Mission</p><h2>Help broken people heal, and point them back to Jesus.</h2>
+<p>That's the whole thing. Dave has plenty of options for what to do with this stretch of his life. He chose this one — because too many people are hurting quietly, and too many have drifted from God and from the kind of community that could walk with them.</p>
+<p>The book is a bridge, not the destination. If it helps even one person take a step back toward honesty, toward hope, toward Jesus and a real church — it was worth writing.</p>
+</div></div></section>
+<section id="pay-it-forward" class="section section--white"><div class="container dg-centered">
+<p class="section__eyebrow">Pay It Forward</p><h2>A name probably came to mind.</h2>
+<div class="dg-pif-cover"><img src="https://storage.mlcdn.com/account_image/2488860/tKDih616oGBU8RyNnHbE1vckKyYDK4v0gMouIahV.jpg" alt="A stack of Disappointing Grace books ready to be passed on"></div>
+<p style="max-width:600px;">If this book meant something to you, there's a good chance you thought of someone while you read it — someone in a hard season, someone praying into silence right now. The most valuable thing you can do isn't for Dave. It's to put the book in their hands.</p>
+<p style="max-width:600px;">A copy, an audio link, a text that says <em>"this made me think of you."</em> You don't have to have the words. You just have to be the one who passes it on.</p>
+<p style="max-width:600px;"><a href="https://disappointinggrace.com/pay-it-forward" style="font-weight:600;">Here's how to pass it on &rarr;</a></p>
+</div></section>
+<section class="section section--dark"><div class="container dg-centered"><p class="section__eyebrow">Take the Next Step</p><h2>You don’t have to stay in your silent isolation.</h2><p style="max-width:560px">Start with Dave’s story. Choose the format that works for you.</p><a href="#formats" class="hero__cta" data-dg-link="amazon">Get the Kindle Edition on Amazon</a><p class="dg-free-link"><a href="#formats" data-dg-link="free">Read or listen free &rarr;</a></p></div></section>
+<section id="contact" class="section section--sand"><div class="container dg-centered">
+<p class="section__eyebrow">Get in Touch</p><h2>Questions, bulk orders, or just want to say hello</h2>
+<p style="max-width:540px;margin-bottom:8px;">Whether you want to share the book with your church, small group, or recovery ministry, or you just want to reach Dave — we'd love to hear from you.</p>
+<div class="dg-contact-action"><a href="mailto:team@disappointinggrace.com" class="dg-email-button">Email Us</a></div>
+<div class="dg-contact-email">team@disappointinggrace.com</div>
+</div></section>
+</div>
+</div><div class="ml-code-html"><div>
+<footer class="site-footer"><div class="container"><div class="footer-inner">
+<img src="https://storage.mlcdn.com/account_image/2488860/q18JzUWf01eLtsjdPpLtUej7qXzaFVJuYlCJJXI1.png" alt="Disappointing Grace" class="footer-logo">
+<ul class="footer-links"><li><a href="https://disappointinggrace.com/privacy">Privacy Policy</a></li><li><a href="https://disappointinggrace.com/terms">Terms of Service</a></li><li><a href="mailto:team@disappointinggrace.com">Contact</a></li></ul>
+<div>&copy; 2026 Disappointing Grace. All rights reserved.</div>
+</div></div></footer>
+<style>
+#dg-signup-dialog{margin:auto;width:calc(100% - 32px);max-width:480px;max-height:90vh;max-height:90dvh;overflow:auto;border:1px solid #c8963e;border-radius:12px;padding:36px;background:#faf8f4;color:#3d3d3d;box-shadow:0 24px 80px #0005;text-align:left}
+#dg-signup-dialog::backdrop{background:rgba(5,18,18,.82)}
+#dg-signup-dialog .dg-signup-close{position:absolute;right:10px;top:8px;width:44px;height:44px;border:0;background:none;color:#1a3a3a;font:28px/1 sans-serif;cursor:pointer}
+#dg-signup-dialog h2{font:italic 400 28px/1.25 Georgia,serif;margin:4px 24px 16px 0;color:#1a3a3a}
+#dg-signup-dialog p{font:16px/1.6 Georgia,serif;margin:0 0 20px}
+#dg-signup-dialog label{display:block;margin:0 0 8px;font:600 14px/1.4 var(--sans,system-ui);color:#1a3a3a}
+#dg-signup-dialog input[type=email]{width:100%;min-height:48px;border:1px solid #b6beb9;border-radius:6px;background:#fff;padding:12px;font:16px/1.4 var(--sans,system-ui);color:#2a2a2a}
+#dg-signup-dialog .ml-form-embedSubmit button{width:100%;min-height:48px;margin-top:20px;border:0;border-radius:6px;background:linear-gradient(110deg,#c8963e,#d4a84f);color:#1a3a3a;padding:12px 16px;font:600 16px/1.4 var(--sans,system-ui);cursor:pointer}
+#dg-signup-dialog .ml-form-embedSubmit button:disabled{opacity:.65;cursor:wait}
+#dg-signup-dialog .dg-signup-privacy{font:12px/1.6 var(--sans,system-ui);color:#626a65;margin:16px 0 0}
+#dg-signup-dialog a{text-decoration:underline;color:#6b501c}
+#dg-signup-dialog :focus-visible{outline:2px solid #8c6625;outline-offset:3px}
+#dg-signup-dialog .ml-error input{border:2px solid #ae2d2d}
+#dg-signup-dialog .ml-error .label-description,#dg-signup-dialog .ml-error .label-description p{color:#ae2d2d;font:14px/1.5 system-ui;margin:6px 0}
+@media(max-width:480px){#dg-signup-dialog{padding:32px 24px 28px}#dg-signup-dialog h2{font-size:26px}}
+</style>
+<dialog id="dg-signup-dialog" aria-labelledby="dg-signup-title">
+<button class="dg-signup-close" type="button" aria-label="Close signup">×</button>
+<div id="mlb2-46614030" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-46614030"><div class="ml-form-align-center"><div class="ml-form-embedWrapper embedForm">
+<div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+<div class="ml-form-embedContent"><h2 id="dg-signup-title">Get the free eBook &amp; audiobook</h2><p>Receive the full story to read or listen to, plus occasional updates from Dave.</p></div>
+<form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2488860/forms/200154132057687272/subscribe" data-code="" method="post" target="_blank">
+<div class="ml-form-formContent"><div class="ml-form-fieldRow ml-last-item"><div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+<label for="dg-signup-email">Email address</label><input id="dg-signup-email" aria-required="true" required type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="you@example.com" autocomplete="email">
+</div></div></div>
+<input type="hidden" name="ml-submit" value="1"><div class="ml-form-embedSubmit"><button type="submit" class="primary">Send me the free book &amp; audio</button><button disabled style="display:none" type="button" class="loading">Signing you up…</button></div><input type="hidden" name="anticsrf" value="true">
+<div class="ml-form-embedPermissions"><div class="ml-form-embedPermissionsContent default privacy-policy"><p class="dg-signup-privacy">Unsubscribe anytime. <a href="https://disappointinggrace.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>.</p></div></div>
+</form></div>
+<div class="ml-form-successBody row-success" style="display:none" role="status" tabindex="-1"><div class="ml-form-successContent"><h2>You’re on the list.</h2><p>Check your inbox for next steps. If you receive a confirmation email, confirm your address first.</p></div></div>
+</div></div></div></dialog>
+<script>function ml_webform_success_46614030(){const f=document.getElementById('mlb2-46614030');f.querySelector('.row-form').style.display='none';const s=f.querySelector('.row-success');s.style.display='block';s.focus()}</script>
+<script src="https://groot.mailerlite.com/js/w/webforms.min.js?v83147fa8ce2d95cb73ece7f28b469519" defer></script>
+</div>
+</div><div class="ml-code-html"><div>
+<style>
+/* Keep MailerLite's page shell from changing the custom page. */
+.ml-section-wrapper:has(.ml-code-html)>.ml-animate{max-width:none!important;width:100%!important;padding-left:0!important;padding-right:0!important}
+.ml-section-wrapper .list-group-item:has(.ml-code-html)>div{padding-bottom:0!important;--element-padding-bottom-mobile:0px}
+.ml-section-wrapper:has(.ml-code-html) .grid:has(>.ml-desktop-layout){row-gap:0!important}
+.ml-code-html{font-family:Georgia,'Times New Roman',serif;font-size:1.0625rem;line-height:1.7;color:#3d3d3d}
+.ml-code-html .hero,.ml-code-html .section,.ml-code-html .storm-quote{font-family:Georgia,'Times New Roman',serif;line-height:1.7}
+.ml-code-html .site-nav__links,.ml-code-html .footer-links{margin:0;padding:0;list-style:none}
+.ml-code-html .container{width:100%;max-width:1080px;margin-left:auto;margin-right:auto;padding-left:24px;padding-right:24px}
+/* Keep older generated styles from overriding the launch cards. */
+.ml-code-html #formats .format-card.dg-featured{border:2px solid #c8963e}
+.ml-code-html #formats .format-card .dg-format-label{font:500 .75rem/1.5 var(--sans);text-transform:uppercase;letter-spacing:.08em;color:#86621f;margin-bottom:12px}
+/* Softer hero copy and more room between the cover and text. */
+.ml-code-html .hero .hero__desc{font-family:var(--sans,system-ui)!important;font-size:1.0625rem;line-height:1.85;font-weight:400;letter-spacing:normal;max-width:500px;color:#f5f0e8;opacity:.85;margin-bottom:32px}
+.ml-code-html .hero .hero__text{max-width:520px}
+.ml-code-html .hero .dg-choice-note{display:none}
+.ml-code-html .hero .dg-audio{margin-top:28px!important}
+@media(min-width:768px){.ml-code-html .hero .hero__inner{gap:72px}}
+@media(max-width:767px){.ml-code-html .hero .hero__inner{gap:36px}.ml-code-html .hero .hero__desc{margin-left:auto;margin-right:auto}}
+
+/* Preserve the current component design when older MailerLite styles remain. */
+.ml-code-html .about-book{grid-template-columns:minmax(0,1fr);gap:32px}
+.ml-code-html .pullquote{padding:16px 0 16px 24px;margin:0 0 24px;line-height:1.6}
+.ml-code-html .pullquote:last-child{margin-bottom:0}
+.ml-code-html .author-grid{grid-template-columns:minmax(0,1fr);gap:32px}
+.ml-code-html .author-photo{width:220px;height:220px;border:4px solid #ffffff40;box-shadow:0 8px 32px #0005}
+.ml-code-html .formats-grid{grid-template-columns:minmax(0,1fr);gap:24px;margin-top:32px}
+.ml-code-html .format-card{padding:28px 24px}
+.ml-code-html .site-footer{padding:32px 0;color:#ffffffb3;line-height:1.6}
+.ml-code-html .footer-logo{height:48px;opacity:.85}
+.ml-code-html .footer-links{gap:12px 24px}
+.ml-code-html .footer-links a,.ml-code-html .footer-contact a{color:#ffffffb3}
+.ml-code-html .footer-links a:hover{color:var(--gold)}
+@media(min-width:768px){.ml-code-html .about-book{grid-template-columns:repeat(2,minmax(0,1fr));gap:48px}.ml-code-html .author-grid{grid-template-columns:240px minmax(0,1fr);gap:40px}.ml-code-html .formats-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:767px){.ml-code-html .pullquote{padding-left:20px}.ml-code-html .author-photo{width:200px;height:200px}.ml-code-html .site-footer{padding:28px 0}}
+#dg-audio-player.dg-audio .dg-audio__options{min-width:180px;max-width:calc(100vw - 32px)}#dg-audio-player.dg-audio .dg-audio__options button,#dg-audio-player.dg-audio .dg-audio__options a{display:block;width:100%;min-height:44px;padding:10px 12px;text-align:left;white-space:nowrap;font:14px/1.4 system-ui,sans-serif;color:#f5f0e8}
+/* Align format actions and improve labels on cream backgrounds. */
+.ml-code-html #formats .format-card p:not(.dg-format-label){margin-bottom:24px}
+.ml-code-html #formats .format-card .hero__cta,.ml-code-html #formats .format-card .dg-outline-button{margin-top:auto}
+.ml-code-html .section--white .section__eyebrow,.ml-code-html .section--sand .section__eyebrow,.ml-code-html .dg-hero-reviews__label,.ml-code-html #reviews .dg-label{color:#86621f}
+</style>
+</div>
+</div></body></html>
