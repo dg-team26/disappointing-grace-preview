@@ -160,25 +160,7 @@ window.addEventListener('message',e=>{if(e.origin===new URL(url).origin&&e.sourc
 </script>
 </div>
 <div>
-<style>
-.dg-hero-reviews{background:var(--sand);padding:40px 0;text-align:center;color:var(--text-dark)}
-.dg-hero-reviews__inner{max-width:720px;margin:auto;padding:0 24px}
-.dg-hero-reviews__label{font:500 .75rem/1.5 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
-.dg-hero-reviews__slides{display:grid;align-items:center;min-height:128px}
-.dg-hero-reviews__slide{grid-area:1/1;visibility:hidden}
-.dg-hero-reviews__slide.dg-active{visibility:visible;animation:dgHeroEnter .25s ease-out}
-.dg-hero-reviews__mark{display:block;font:40px/1 Georgia,serif;color:var(--gold);opacity:.6;margin-bottom:8px}
-.dg-hero-reviews__quote{font:italic clamp(1.25rem,3vw,1.75rem)/1.5 Georgia,serif;margin-bottom:12px}
-.dg-hero-reviews__credit{font:400 .8125rem/1.5 var(--sans);color:#666}
-.dg-hero-reviews__dots{display:flex;align-items:center;justify-content:center;margin-top:12px}
-.dg-hero-reviews__dots button{background:none;border:0;width:28px;height:32px;padding:0;cursor:pointer;display:grid;place-items:center}
-.dg-hero-reviews__dots button:after{content:"";width:6px;height:6px;border-radius:50%;background:#d8cbbb}
-.dg-hero-reviews__dots button[aria-pressed="true"]:after{width:10px;height:10px;background:var(--gold)}
-.dg-hero-reviews__dots button:focus-visible{outline:2px solid var(--gold);outline-offset:1px;border-radius:4px}
-@keyframes dgHeroEnter{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:767px){.dg-hero-reviews{padding:32px 0}}
-@media(prefers-reduced-motion:reduce){.dg-hero-reviews__slide.dg-active{animation:none}}
-</style>
+<link rel="stylesheet" href="https://dg-team26.github.io/disappointing-grace-preview/mailerlite/launch-v2/reviews-v3.css">
 <section class="dg-hero-reviews" aria-label="Early reader highlights" aria-roledescription="carousel">
 <div class="dg-hero-reviews__inner">
 <p class="dg-hero-reviews__label">What Early Readers Are Saying</p>
@@ -188,19 +170,12 @@ window.addEventListener('message',e=>{if(e.origin===new URL(url).origin&&e.sourc
 <div class="dg-hero-reviews__slide" aria-hidden="true"><span class="dg-hero-reviews__mark" aria-hidden="true">&ldquo;</span><p class="dg-hero-reviews__quote">A page turner!</p><p class="dg-hero-reviews__credit">— Early reader</p></div>
 <div class="dg-hero-reviews__slide" aria-hidden="true"><span class="dg-hero-reviews__mark" aria-hidden="true">&ldquo;</span><p class="dg-hero-reviews__quote">You have no idea how much I can relate.</p><p class="dg-hero-reviews__credit">— Early reader</p></div>
 <div class="dg-hero-reviews__slide" aria-hidden="true"><span class="dg-hero-reviews__mark" aria-hidden="true">&ldquo;</span><p class="dg-hero-reviews__quote">Just what I need right now.</p><p class="dg-hero-reviews__credit">— Early reader</p></div>
+<div class="dg-hero-reviews__slide" aria-hidden="true"><span class="dg-hero-reviews__mark" aria-hidden="true">&ldquo;</span><p class="dg-hero-reviews__quote">It was very captivating.</p><p class="dg-hero-reviews__credit">— Early reader</p></div>
+<div class="dg-hero-reviews__slide" aria-hidden="true"><span class="dg-hero-reviews__mark" aria-hidden="true">&ldquo;</span><p class="dg-hero-reviews__quote">Engaging for sure!</p><p class="dg-hero-reviews__credit">— Early reader</p></div>
+<div class="dg-hero-reviews__slide" aria-hidden="true"><span class="dg-hero-reviews__mark" aria-hidden="true">&ldquo;</span><p class="dg-hero-reviews__quote">It leaves me wanting to read more!</p><p class="dg-hero-reviews__credit">— Early reader</p></div>
 </div><div class="dg-hero-reviews__dots" aria-label="Choose a reader highlight"></div>
 </div></section>
-<script>
-(()=>{
-const r=document.querySelector('.dg-hero-reviews');if(!r||r.dataset.ready)return;r.dataset.ready='1';
-const cards=[...r.querySelectorAll('.dg-hero-reviews__slide')],dots=r.querySelector('.dg-hero-reviews__dots'),reduced=matchMedia('(prefers-reduced-motion:reduce)');
-let i=0,t,hover=false;const stop=()=>clearInterval(t);
-function show(n){i=(n+cards.length)%cards.length;cards.forEach((c,k)=>{c.classList.toggle('dg-active',k===i);c.setAttribute('aria-hidden',String(k!==i))});[...dots.children].forEach((b,k)=>b.setAttribute('aria-pressed',String(k===i)))}
-function run(){stop();if(!reduced.matches&&!document.hidden&&!hover&&!r.contains(document.activeElement))t=setInterval(()=>show(i+1),3000)}
-cards.forEach((c,k)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Show reader highlight '+(k+1));b.addEventListener('click',()=>{show(k);run()});dots.appendChild(b)});
-r.addEventListener('mouseenter',()=>{hover=true;stop()});r.addEventListener('mouseleave',()=>{hover=false;run()});r.addEventListener('focusin',stop);r.addEventListener('focusout',()=>setTimeout(run,0));document.addEventListener('visibilitychange',run);reduced.addEventListener('change',run);show(0);run();
-})();
-</script>
+<script src="https://dg-team26.github.io/disappointing-grace-preview/mailerlite/launch-v2/reviews-v3.js" defer></script>
 </div>
 <div>
 <section id="about-book" class="section section--white">
@@ -226,26 +201,7 @@ r.addEventListener('mouseenter',()=>{hover=true;stop()});r.addEventListener('mou
 </div></div></section>
 </div>
 <div>
-<style>
-#reviews{background:var(--warm-white);padding:72px 0;color:var(--text-dark)}
-#reviews .dg-wrap{max-width:1080px;margin:auto;padding:0 24px}
-#reviews .dg-label{font:500 .75rem/1.5 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--gold);text-align:center;margin:0 0 12px}
-#reviews h2{font:italic 400 clamp(1.5rem,3.5vw,2.25rem)/1.3 Georgia,serif;text-align:center;margin:0 0 32px}
-#reviews .dg-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
-#reviews .dg-card{background:var(--sand);border-radius:8px;padding:28px 24px;border-left:3px solid var(--gold);min-width:0}
-#reviews .dg-quote{font:italic 1.0625rem/1.65 Georgia,serif;color:var(--text-body);margin:0 0 12px}
-#reviews .dg-name{font:400 .8125rem/1.5 var(--sans);color:#666;margin:0}
-#reviews .dg-dots{display:none}
-#reviews.dg-ready .dg-grid{grid-template-columns:minmax(0,1fr);gap:0;touch-action:pan-y;cursor:pointer}
-#reviews.dg-ready .dg-card{grid-area:1/1;visibility:hidden}
-#reviews.dg-ready .dg-card.dg-active{visibility:visible}
-#reviews.dg-ready .dg-dots{display:flex;justify-content:center;align-items:center;margin-top:12px}
-#reviews .dg-dots button{border:0;background:transparent;padding:0;width:28px;height:32px;cursor:pointer;display:grid;place-items:center}
-#reviews .dg-dots button:after{content:"";width:6px;height:6px;border-radius:50%;background:#d8cbbb}
-#reviews .dg-dots button[aria-pressed="true"]:after{width:10px;height:10px;background:var(--gold)}
-#reviews .dg-dots button:focus-visible,#reviews .dg-grid:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
-@media(max-width:767px){#reviews{padding:48px 0}#reviews h2{margin-bottom:24px}#reviews .dg-grid{grid-template-columns:minmax(0,1fr)}#reviews .dg-card{padding:24px 20px}}
-</style>
+<link rel="stylesheet" href="https://dg-team26.github.io/disappointing-grace-preview/mailerlite/launch-v2/reviews-v3.css">
 <section id="reviews"><div class="dg-wrap">
 <p class="dg-label">From Those Who Read It First</p><h2>Real words from real readers</h2>
 <div class="dg-grid">
@@ -255,23 +211,14 @@ r.addEventListener('mouseenter',()=>{hover=true;stop()});r.addEventListener('mou
 <div class="dg-card"><p class="dg-quote">"Mission accomplished in a highly effective and powerful way! It drew me in instantly, and I can't wait to read the rest!"</p><p class="dg-name">— Early reader</p></div>
 <div class="dg-card"><p class="dg-quote">"Thank you for pouring out your honest heart. God wants to hear from His children, even through the anger."</p><p class="dg-name">— Early reader</p></div>
 <div class="dg-card"><p class="dg-quote">"If the rest of this book is anything like the first chapter, I can't wait to sit down and finish it in one sitting."</p><p class="dg-name">— Early reader</p></div>
+<div class="dg-card"><p class="dg-quote">&ldquo;I was reading about myself, my self-doubt, my recent life.&rdquo;</p><p class="dg-name">— Early reader</p></div>
+<div class="dg-card"><p class="dg-quote">&ldquo;I can identify with you when life doesn’t make sense and you’re crying out to God and He answers differently than what you were believing and hoping for.&rdquo;</p><p class="dg-name">— Early reader</p></div>
+<div class="dg-card"><p class="dg-quote">&ldquo;An up close and personal look into what many have been and are dealing with in their faith journey.&rdquo;</p><p class="dg-name">— Early reader</p></div>
+<div class="dg-card"><p class="dg-quote">&ldquo;I hope others also find a way to apply the hard lessons learned by another to their own personal life.&rdquo;</p><p class="dg-name">— Early reader</p></div>
+<div class="dg-card"><p class="dg-quote">&ldquo;…letting them work through the storm with Him beside them, not fixing the storm for them.&rdquo;</p><p class="dg-name">— Early reader</p></div>
+<div class="dg-card"><p class="dg-quote">&ldquo;I'm sure it will encourage others.&rdquo;</p><p class="dg-name">— Early reader</p></div>
 </div><div class="dg-dots" aria-label="Choose a review"></div></div></section>
-<script>
-(()=>{
-const r=document.getElementById('reviews');if(!r||r.dataset.swipe)return;r.dataset.swipe='1';
-const cards=[...r.querySelectorAll('.dg-card')],g=r.querySelector('.dg-grid'),d=r.querySelector('.dg-dots'),m=matchMedia('(max-width:767px)'),reduced=matchMedia('(prefers-reduced-motion:reduce)');
-let i=0,t,start=null;const stop=()=>clearInterval(t);
-const run=()=>{stop();if(m.matches&&!reduced.matches&&!document.hidden&&!start&&!r.contains(document.activeElement))t=setInterval(()=>show(i+1),3000)};
-const show=n=>{i=(n+cards.length)%cards.length;cards.forEach((c,k)=>{c.classList.toggle('dg-active',k===i);c.setAttribute('aria-hidden',String(k!==i))});[...d.children].forEach((b,k)=>b.setAttribute('aria-pressed',String(k===i)))};
-cards.forEach((c,k)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Show review '+(k+1));b.addEventListener('click',()=>{show(k);run()});d.appendChild(b)});
-r.classList.add('dg-ready');show(0);run();
-g.addEventListener('click',()=>{if(!m.matches){show(i+1);run()}});
-g.addEventListener('pointerdown',e=>{if(!m.matches||!e.isPrimary||(e.pointerType==='mouse'&&e.button!==0))return;start={x:e.clientX,y:e.clientY,id:e.pointerId};g.setPointerCapture?.(e.pointerId);stop()});
-g.addEventListener('pointerup',e=>{if(!start||start.id!==e.pointerId)return;const x=e.clientX-start.x,y=e.clientY-start.y;start=null;if(Math.abs(x)>40&&Math.abs(x)>Math.abs(y)*1.2)show(i+(x<0?1:-1));run()});
-g.addEventListener('pointercancel',()=>{start=null;run()});
-r.addEventListener('focusin',stop);r.addEventListener('focusout',()=>setTimeout(run,0));document.addEventListener('visibilitychange',run);m.addEventListener('change',()=>{start=null;show(i);run()});reduced.addEventListener('change',run);
-})();
-</script>
+<script src="https://dg-team26.github.io/disappointing-grace-preview/mailerlite/launch-v2/reviews-v3.js" defer></script>
 </div>
 <div>
 <section id="author" class="section section--dark"><div class="container"><div class="author-grid">
@@ -359,5 +306,27 @@ r.addEventListener('focusin',stop);r.addEventListener('focusout',()=>setTimeout(
 </div></div></div></dialog>
 <script>function ml_webform_success_46614030(){const f=document.getElementById('mlb2-46614030');f.querySelector('.row-form').style.display='none';const s=f.querySelector('.row-success');s.style.display='block';s.focus()}</script>
 <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v83147fa8ce2d95cb73ece7f28b469519" defer></script>
+</div>
+<div>
+<style>
+/* Keep MailerLite's page shell from changing the custom page. */
+.ml-section-wrapper:has(.ml-code-html)>.ml-animate{max-width:none!important;width:100%!important;padding-left:0!important;padding-right:0!important}
+.ml-section-wrapper .list-group-item:has(.ml-code-html)>div{padding-bottom:0!important;--element-padding-bottom-mobile:0px}
+.ml-section-wrapper:has(.ml-code-html) .grid:has(>.ml-desktop-layout){row-gap:0!important}
+.ml-code-html{font-family:Georgia,'Times New Roman',serif;font-size:1.0625rem;line-height:1.7;color:#3d3d3d}
+.ml-code-html .hero,.ml-code-html .section,.ml-code-html .storm-quote{font-family:Georgia,'Times New Roman',serif;line-height:1.7}
+.ml-code-html .site-nav__links,.ml-code-html .footer-links{margin:0;padding:0;list-style:none}
+.ml-code-html .container{width:100%;max-width:1080px;margin-left:auto;margin-right:auto;padding-left:24px;padding-right:24px}
+/* Keep older generated styles from overriding the launch cards. */
+.ml-code-html #formats .format-card.dg-featured{border:2px solid #c8963e}
+.ml-code-html #formats .format-card .dg-format-label{font:500 .75rem/1.5 var(--sans);text-transform:uppercase;letter-spacing:.08em;color:#86621f;margin-bottom:12px}
+/* Softer hero copy and more room between the cover and text. */
+.ml-code-html .hero .hero__desc{font-family:var(--sans,system-ui)!important;font-size:1.0625rem;line-height:1.85;font-weight:400;letter-spacing:normal;max-width:500px;color:#f5f0e8;opacity:.85;margin-bottom:32px}
+.ml-code-html .hero .hero__text{max-width:520px}
+.ml-code-html .hero .dg-choice-note{display:none}
+.ml-code-html .hero .dg-audio{margin-top:28px!important}
+@media(min-width:768px){.ml-code-html .hero .hero__inner{gap:72px}}
+@media(max-width:767px){.ml-code-html .hero .hero__inner{gap:36px}.ml-code-html .hero .hero__desc{margin-left:auto;margin-right:auto}}
+</style>
 </div>
 </body></html>
