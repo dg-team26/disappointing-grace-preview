@@ -40,3 +40,10 @@
 .dg-hero-reviews__dots button[hidden],#reviews .dg-dots button[hidden]{display:none}
 .dg-hero-reviews__dots button[data-distance="2"],#reviews .dg-dots button[data-distance="2"]{opacity:.35}
 .dg-hero-reviews__dots button[data-distance="1"],#reviews .dg-dots button[data-distance="1"]{opacity:.7}
+
+/* Override MailerLite's older inline dot rules. */
+.dg-hero-reviews .dg-hero-reviews__dots button[hidden],#reviews.dg-ready .dg-dots button[hidden]{display:none!important}
+.dg-hero-reviews__dots button:after,#reviews .dg-dots button:after{transition:width .25s,height .25s,background .25s}
+.dg-hero-reviews__dots.dg-dots-moving button:not([hidden]),#reviews .dg-dots.dg-dots-moving button:not([hidden]){animation:dgDotShift .3s ease-out}
+@keyframes dgDotShift{from{transform:translateX(28px);opacity:.15}to{transform:translateX(0)}}
+@media(prefers-reduced-motion:reduce){.dg-hero-reviews__dots button,#reviews .dg-dots button{animation:none!important}.dg-hero-reviews__dots button:after,#reviews .dg-dots button:after{transition:none}}
